@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Document</title>
+   <style>
+      img {
+         display: inline-block;
+         width: 690px;
+         height: 380px;
+         background-color: #666666;
+         border-radius: 4px;
+      }
+   </style>
+</head>
+<body>
+   <img src="">
+   <script>
+      const imgUrl = 'https://gw.alicdn.com/imgextra/i1/1450893/O1CN01R3IEDo1IT2FTz59P6_!!1450893-0-lubanu.jpg';
+      //创建一个空的<img /> 同步 异步
+      const imgNode = new Image();
+      imgNode.onload = function(){
+         document.querySelector('img').src = imgUrl;
+      }
+      imgNode.src = imgUrl;
+   </script>
+</body>
+</html>
