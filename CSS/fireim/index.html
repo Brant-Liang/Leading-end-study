@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>前端学习1.4</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="section">
+       <div class="plane-wrapper">
+            <img src="http://fir.im/images/plane.svg" alt="" class="plane">
+         <div class="rotate-container">
+            <img src="http://fir.im/images/propeller.svg" alt="" class="propeller">
+         </div>
+       </div> 
+    </div>
+    <script>
+       //JS事件驱动语言
+    window.addEventListener('keydown',function() {
+      document
+         .querySelector('.plane-wrapper')
+         .classList.add('plane-out')
+      //console.log('按键了');
+    })
+    </script>
+</body>
+</html>

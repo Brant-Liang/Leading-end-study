@@ -1,0 +1,301 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  list-style: none;
+}
+.flex {
+  display: flex;
+}
+.flex1 {
+  flex: 1;
+}
+html,
+body {
+  width: 100%;
+}
+.action-list.section-til {
+  padding-left: 0.4rem;
+}
+.section-til {
+  font-size: 17px;
+  color: #000;
+}
+.nav {
+  height: 1.067rem;
+  font-size: 18px;
+  text-align: center;
+  line-height: 1.067rem;
+  background-color: #e54847;
+}
+.nav .arrow-left {
+  float: left;
+  height: 100%;
+  position: relative;
+}
+.nav .arrow-left::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border: 2px solid #fff;
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: rotate(45deg) translateY(-50%);
+  border-width: 0 0 2px 2px;
+}
+.nav span {
+  color: #fff;
+}
+.page {
+  background-color: #f4f4f4;
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: #555;
+  min-width: 3.1rem;
+  font: 14px/1.5 Arial, Helvetica, sans-serif;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: rgba(255,255,255,0);
+}
+.page section {
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+.page .moive-header {
+  padding: 0;
+  background-color: #f8f8f8;
+  border-bottom: none;
+}
+.page .moive-header .moive {
+  color: #fff;
+  padding: 0.4rem;
+  line-height: 1;
+  position: relative;
+  box-sizing: border-box;
+  filter: blur(0);
+  overflow: auto;
+}
+.page .moive-header .moive-background,
+.page .moive-header .moive-filter {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.page .moive-header .moive-background {
+  background-image: url("./images/header-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 40%;
+  filter: blur(0.6rem);
+  z-index: -1;
+}
+.page .moive-header .moive-filter {
+  background-color: #40454d;
+  opacity: 0.55;
+  z-index: -1;
+}
+.page .moive-header .moive-container {
+  overflow: hidden;
+}
+.page .moive-header .moive-container .moive-cover {
+  float: left;
+  width: 2.854rem;
+  height: 4rem;
+  border: 0.3px solid #f0f2f3;
+  position: relative;
+}
+.page .moive-header .moive-container .moive-cover .link {
+  cursor: pointer;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.page .moive-header .moive-container .moive-cover .link img {
+  width: 100%;
+  height: 100%;
+}
+.page .moive-header .moive-container .moive-content {
+  overflow: hidden;
+  padding-left: 0.4rem;
+}
+.page .moive-header .moive-container .moive-content .moive-name {
+  font-size: 17px;
+  margin: 0.08rem 0;
+}
+.page .moive-header .moive-container .moive-content .moive-ename {
+  font-size: 12px;
+  margin-bottom: 0.2rem;
+}
+.page .moive-header .moive-container .moive-content .moive-score {
+  font-size: 12px;
+  margin-bottom: 0.3rem;
+}
+.page .moive-header .moive-container .moive-content .moive-score .rating img {
+  width: 0.48rem;
+  height: 0.48rem;
+  margin-right: 2px;
+}
+.page .moive-header .moive-container .moive-content .moive-score .rating .rating-score {
+  font-size: 0.48rem;
+  color: #ffc600;
+}
+.page .moive-header .moive-container .moive-content .moive-detail {
+  font-size: 12px;
+  margin-bottom: 0.16rem;
+  opacity: 0.7;
+}
+.page .moive-header .moive-container .moive-content .moive-detail p {
+  margin-bottom: 0.14rem;
+}
+.page .moive-header .moive-container .moive-content .moive-detail p span {
+  vertical-align: middle;
+}
+.page .moive-header .moive-container .moive-content .moive-detail p img {
+  vertical-align: middle;
+  display: inline-block;
+  height: 0.38rem;
+}
+.page .moive-header .moive .operating {
+  margin-top: 0.5rem;
+}
+.page .moive-header .moive .operating div {
+  border: 1px solid rgba(255,255,255,0.4);
+  background-color: rgba(255,255,255,0.4);
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  padding: 0.25rem 0;
+  border-radius: 4px;
+}
+.page .moive-header .moive .operating div img,
+.page .moive-header .moive .operating div span {
+  vertical-align: middle;
+}
+.page .moive-header .moive .operating .moive-watch {
+  margin-right: 0.3rem;
+}
+.page .moive-header .moive .operating .moive-watch img {
+  width: 14px;
+  height: 14px;
+}
+.page .moive-header .moive .operating .moive-mark img {
+  width: 18px;
+  height: 18px;
+}
+.page .section-seperate {
+  padding-top: 0.4rem;
+  margin-bottom: 0.3rem;
+  border-top: 1px solid #e5e5e5;
+}
+.page .section-expander {
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+}
+.page .section-expander .text-expander_content.close {
+  min-height: 65px;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+.page .section-expander .text-expander_button {
+  height: 0.7rem;
+  text-align: center;
+}
+.page .section-expander .text-expander_button .icon-shevron_down {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #aaa;
+  display: inline-block;
+  transform: rotateZ(45deg);
+  border-width: 0 1px 1px 0;
+  box-sizing: border-box;
+  transition: transform 0.2S;
+}
+.page .section-expander .text-expander_button .icon-shevron_down.up {
+  transform: rotateZ(-135deg);
+}
+.page .section-seperate .moive-celebrities {
+  width: 100%;
+  padding: 0.3rem 0.3rem 0.1rem 0.3rem;
+  white-space: nowrap;
+  overflow-x: scroll;
+  box-sizing: border-box;
+}
+.page .section-seperate .moive-celebrities li {
+  text-align: center;
+  display: inline-block;
+  padding: 0.2rem;
+}
+.page .section-seperate .moive-celebrities li .link {
+  color: #000;
+}
+.page .section-seperate .moive-celebrities li .link .moive-celebrities_pic {
+  width: 1.7334rem;
+  height: 2.4rem;
+  margin: 0.05rem;
+}
+.page .section-seperate .moive-celebrities li .link .moive-celebrities_pic img {
+  width: 100%;
+  height: 100%;
+}
+.page .section-seperate .moive-celebrities li .link span {
+  display: block;
+  font-size: 0.2rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.page .section-seperate .moive-celebrities li .link .moive-celebrities-roles {
+  color: #999;
+  line-height: 20px;
+}
+.page .secition-seperate,
+.page .section-booking {
+  padding-bottom: 0.2rem;
+}
+.page .secition-seperate .weui-flex,
+.page .section-booking .weui-flex {
+  text-align: center;
+}
+.page .secition-seperate .weui-flex .placeholder span,
+.page .section-booking .weui-flex .placeholder span {
+  font-size: 24px;
+  color: #d96a3d;
+}
+.page .secition-seperate .weui-flex .placeholder p,
+.page .section-booking .weui-flex .placeholder p {
+  color: #bababa;
+  margin-top: 0.1rem;
+}
+.page .movie-photo .movie-photo_lists {
+  width: 100%;
+  padding: 0.3rem 0.3rem 0.2rem 0.3rem;
+  white-space: nowrap;
+  overflow-x: scroll;
+  box-sizing: border-box;
+}
+.page .movie-photo .movie-photo_lists .stage-img-container {
+  margin-right: 0.13333rem;
+  display: inline-block;
+  width: 2.4rem;
+  height: 1.867rem;
+}
+.page .movie-photo .movie-photo_lists .stage-img-container .movie-celebrities__pic {
+  width: 100%;
+  height: 100%;
+}
+.page .movie-photo .movie-photo_lists .stage-img-container .movie-celebrities__pic img {
+  width: 100%;
+  height: 100%;
+}
+#toast {
+  display: none;
+}

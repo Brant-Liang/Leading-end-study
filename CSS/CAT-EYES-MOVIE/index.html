@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://cdn.bootcss.com/weui/2.1.2/style/weui.min.css" rel="stylesheet">
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.bootcss.com/jquery/3.3.0/jquery.js"></script>
+</head>
+<body>
+    <header class="nav">
+        <i class="arrow-left"></i>
+        <span>影片详情</span>
+    </header>
+    <div class="page">
+        <!-- section1 -->
+        <section class="moive-header">
+            <div class="moive">
+                <div class="moive-background">
+                </div>
+                <div class="moive-filter"></div>
+                <div class="moive-container">
+                    <!-- pic -->
+                    <div class="moive-cover">
+                        <a href="#" class="link">
+                            <!-- 图片最好不要固定宽高，可使用盒子内图片宽高都为100% 等比缩放 -->
+                            <img src="" alt="" id="moivePic">
+                        </a>
+                    </div>
+                    <!-- detail -->
+                    <div class="moive-content">
+                        <div class="moive-name" >
+                            <span></span>
+                        </div>
+                        <div class="moive-ename">
+                            <span></span>
+                        </div>
+                        <!-- star -->
+                        <div class="moive-score">
+                            <div class="released-score">
+                                <div class="rating" id="rating">
+                                    <!-- <img src="./images/star.png" alt="">
+                                    <img src="./images/star.png" alt="">
+                                    <img src="./images/star.png" alt="">
+                                    <img src="./images/star.png" alt="">
+                                    <img src="./images/star-h.png" alt=""> -->
+                                    <span class="rating-score"></span>
+                                </div>
+                            </div>
+                            <div class="score-num">
+                                (<span></span>人评分)
+                            </div>
+                        </div>
+                        <div class="moive-detail">
+                            <p class="moive-type">
+                                <span>剧情</span>
+                                <img src="https://s0.meituan.net/bs/?f=myfe/canary:/asgard/images/movie/movie-tag-2DIMAX.png
+                                " alt="">
+                            </p>
+                            <p class="adress-time">
+                                <span class="adress"></span>
+                                /
+                                <span class="time"></span>分钟
+                            </p>
+                            <p class="date"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="operating flex">
+                    <div class="moive-watch flex1">
+                        <img src="./images/heart.png" alt="">
+                        <span>想看</span>
+                    </div>
+                    <div class="moive-mark flex1">
+                        <img src="./images/star2.png" alt="">
+                        <span>评分</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section2 -->
+        <section class="section-seperate section-expander">
+            <div class="text-expander">
+                <div class="text-expander_content close">
+                    <p></p>
+                </div>
+                <div class="text-expander_button">
+                    <i class="icon-shevron_down"></i>
+                </div>
+            </div>
+        </section>
+        <!-- section3 -->
+        <section class="section-seperate">
+            <p class="action-list section-til">演职人员</p>
+            <ul class="moive-celebrities">
+                <!-- <li>
+                    <a href="#" class="link">
+                        <div class="moive-celebrities_pic">
+                            <img src="http://p1.meituan.net/movie/8f9372252050095067e0e8d58ef3d939156407.jpg@160w_224h_1e_1c" alt="">
+                        </div>
+                        <span class="moive-celebrities-nick">导演</span>
+                        <span class="moive-celebrities-roles">陈凯歌</span>
+                    </a>
+                </li> -->
+            </ul>
+        </section>
+        <!-- section4 -->
+        <section class="section-seperate section-expander section-booking">
+            <p class="section-til">票房</p>
+            <div class="weui-flex">
+                <div class="weui-flex__item">
+                    <div class="placeholder">
+                        <span id="ranking">12</span>
+                        <p>昨日票房排行</p>
+                    </div>
+                </div>
+                <div class="weui-flex__item">
+                    <div class="placeholder">
+                        <span id="bookingWeek">111</span>
+                        <p>首周票房（万）</p>
+                    </div>
+                </div>
+                <div class="weui-flex__item">
+                    <div class="placeholder">
+                        <span id="bookingWeek">5674</span>
+                        <p>累计票房（万）</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section5 -->
+        <section class="section-seperate movie-photo section-expander">
+            <p class="action-list section-til">视频和剧照</p>
+            <ul class="movie-photo_lists">
+                <!--<li class="stage-img-container">
+                        <a href="#" class="link">
+                        <div class="movie-celebrities_pic">
+                            <img src="http://p0.meituan.net/moviemachine/1cc9dd2dc4911c29e99ab32771eecab67883519.jpg@280w_186h_1e_1c" alt="">
+                        </div>
+                        </a>
+                    </li> -->
+            </ul>
+        </section>
+
+
+
+
+        <div id="toast">
+                <div class="weui-mask_transparent"></div>
+                <div class="weui-toast">
+                    <i class="weui-icon-success-no-circle weui-icon_toast"></i>
+                    <p class="weui-toast__content">已标记为想看</p>
+                </div>
+        </div>
+ 
+    </div>
+    <script>
+        (function () {
+            $.ajax({
+                url: './mock.json',
+                type: 'get',
+                success: function (res) {
+                    console.log(res)
+                    $('#moivePic').attr('src', res.data.moviePic)
+                    $('.moive-name span').html(res.data.name)
+                    $('.moive-ename span').html(res.data.nameEnglish)
+                    $('.rating span').html(res.data.grade)
+                    $('.score-num span').html(res.data.people)
+
+                    star(res.data.star)
+                    $('.adress-time .adress').html(res.data.where)
+                    $('.adress-time .time').html(res.data.time)
+                    $('.moive-detail .date').html(res.data.date)
+                    $('.text-expander_content p').html(res.data.desc)
+                    celebrity(res.data.person)
+                    photo(res.data.pictures)
+                }
+            })
+
+            function star(e) {
+                let num = Math.floor(e)
+                if(e > num){
+                    $('#rating').prepend('<img src="./images/star-h.png" alt="">')
+                }
+                for (let i=0;i < num; i++) {
+                    $('#rating').prepend(' <img src="./images/star.png" alt="">')
+                }
+            }
+
+            //点击想看
+            $('.moive-watch').click(function(){
+                if ($(this).hasClass('active')) {
+                    $('.moive-watch').removeClass('active')
+                    $('.moive-watch img').attr('src', './images/heart.png')
+                    $('#toast .weui-toast__content').html('已取消标记')
+                }
+                else{$('.moive-watch').addClass('active')
+                $('.moive-watch img').attr('src', './images/heart1.png')
+                $('#toast .weui-toast__content').html('已标记为想看')
+                }
+               
+                $('#toast').css('display', 'block')
+                setTimeout(() => {
+                    $('#toast').css('display', 'none')
+                }, 1500)
+            })
+
+            //收放详情
+            $('.text-expander').click(function(){
+                if($('.text-expander_content').hasClass('close')){
+                    $('.text-expander_content').removeClass('close')
+                    $('.icon-shevron_down').addClass('up')
+                }else{
+                    $('.text-expander_content').addClass('close')
+                    $('.icon-shevron_down').removeClass('up')
+                }
+            })
+
+
+            //演职人员列表
+            function celebrity (e) {
+                for(let n of e){
+                    $('.moive-celebrities').append(`<li>
+                    <a href="#" class="link">
+                        <div class="moive-celebrities_pic">
+                            <img src="${n.avatal}" alt="">
+                        </div>
+                        <span class="moive-celebrities-nick">${n.sort}</span>
+                        <span class="moive-celebrities-roles">${n.name}</span>
+                    </a>
+                </li>`)
+                    // $('.moive-celebrities_pic').prepend('<img src="http://p1.meituan.net/movie/8f9372252050095067e0e8d58ef3d939156407.jpg@160w_224h_1e_1c" alt="">')
+                    // $('span.moive-celebrities-nick').html(e.data.sort[i])
+                    // $('span.moive-celebrities-role').html(e.data.name[i])
+                }
+            }
+
+            function photo(e) {
+                for(let n of e){
+                    $('.movie-photo_lists').append(`<li class="stage-img-container">
+                    <a href="#" class="link">   
+                        <div class="movie-celebrities__pic">
+                            <img src="${n}" alt="">
+                        </div>
+                    </a>
+                </li>`)
+                }
+            }
+        })()
+    </script>
+</body>
+</html>
